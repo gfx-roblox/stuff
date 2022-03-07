@@ -3,6 +3,7 @@
 	combines GetChildren() and .ChildAdded() into one
 	kind of turns an instance into a carrier of instances that need to be registered
 	
+	
 	example:
 	registerChildren(workspace, function(child)
 		print(child.Name) -- "Baseplate"
