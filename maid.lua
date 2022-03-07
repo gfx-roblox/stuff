@@ -39,13 +39,11 @@ function Maid.new()
 		table.clear(self)
 	end
 	function self:attach(instance)
-		if instance:IsDescendantOf(workspace) then
-			return instance.AncestryChanged:Connect(function()
-				if not instance:IsDescendantOf(workspace) then
-					self:stop()
-				end
-			end)
-		end
+		return instance.AncestryChanged:Connect(function()
+			if not instance:IsDescendantOf(workspace) then
+				self:stop()
+			end
+		end)
 	end
 	return self
 end
